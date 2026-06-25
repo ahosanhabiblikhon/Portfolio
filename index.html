@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahosan Habib Likhon — Biotechnology & Genetic Engineering Student, Aspiring Front-End Developer, AI & Bioinformatics Enthusiast, Research Enthusiast, and Creative Photographer at Islamic University, Bangladesh." />
+  <meta name="keywords" content="Ahosan Habib Likhon, Biotechnology, Genetic Engineering, Bioinformatics, AI, Front-End Developer, Photography, Islamic University Bangladesh" />
+  <meta name="author" content="Ahosan Habib Likhon" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ahosan Habib Likhon — Biotechnology & Developer Portfolio" />
+  <meta property="og:description" content="Biotechnology & Genetic Engineering Student | Aspiring Front-End Developer | AI & Bioinformatics Enthusiast | Creative Photographer" />
+  <meta property="og:image" content="https://github.com/ahosanhabiblikhon.png" />
+  <meta property="og:url" content="https://ahosanhabiblikhon.github.io" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ahosan Habib Likhon — Portfolio" />
+  <meta name="twitter:description" content="Biotechnology & Genetic Engineering Student | Aspiring Developer | AI Enthusiast | Creative Photographer" />
+  <meta name="twitter:image" content="https://github.com/ahosanhabiblikhon.png" />
+
+  <title>Ahosan Habib Likhon — Biotechnology & Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-dna">
+      <div class="dna-strand">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <p class="loader-text">Initializing...</p>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" role="progressbar" aria-label="Reading progress"></div>
+
+  <!-- Particle Canvas Background -->
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <header id="navbar" role="banner">
+    <nav class="nav-container" aria-label="Primary navigation">
+      <a href="#home" class="nav-logo" aria-label="Go to home section">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="var(--accent)" stroke-width="1.5"/>
+          <path d="M10 16 Q16 8 22 16 Q16 24 10 16Z" fill="var(--accent)" opacity="0.8"/>
+          <circle cx="16" cy="16" r="3" fill="var(--accent)"/>
+        </svg>
+        <span>AHL</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#photography" class="nav-link">Photography</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+      <ul role="list">
+        <li><a href="#home" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#education" class="mobile-link">Education</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#research" class="mobile-link">Research</a></li>
+        <li><a href="#photography" class="mobile-link">Photography</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section id="home" class="hero" aria-label="Introduction">
+      <div class="hero-bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-text reveal-up">
+          <div class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            <span>Open to Research Collaborations</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-name">Ahosan Habib</span>
+            <span class="hero-name accent">Likhon</span>
+          </h1>
+
+          <div class="hero-typed-wrapper" aria-live="polite">
+            <span class="hero-typed-prefix">I am a </span>
+            <span id="typed-text" class="hero-typed"></span>
+            <span class="cursor-blink" aria-hidden="true">|</span>
+          </div>
+
+          <p class="hero-description">
+            Bridging the worlds of <strong>Biotechnology</strong>, <strong>Bioinformatics</strong>, and <strong>Software Development</strong> to create meaningful scientific impact. Passionate about leveraging AI and computational tools to decode life's molecular blueprint.
+          </p>
+
+          <div class="hero-cta">
+            <a href="assets/resume.pdf" download class="btn btn-primary" aria-label="Download CV">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+
+          <div class="hero-social" aria-label="Social media links">
+            <a href="https://github.com/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/ahosan.habib.likhon.nur" target="_blank" rel="noopener noreferrer" aria-label="Facebook Profile" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="mailto:ahosanhabiblikhon@gmail.com" aria-label="Send Email" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-avatar reveal-right">
+          <div class="avatar-wrapper">
+            <div class="avatar-glow" aria-hidden="true"></div>
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <img
+              src="https://github.com/ahosanhabiblikhon.png"
+              alt="Ahosan Habib Likhon — Profile Photo"
+              class="avatar-img"
+              loading="eager"
+              onerror="this.onerror=null; this.src='assets/images/profile-fallback.svg';"
+            />
+            <div class="avatar-badge-wrapper" aria-label="Academic status">
+              <div class="avatar-badge">
+                <span>BSc Student</span>
+                <span>IU Bangladesh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Stats -->
+          <div class="floating-card fc-1 reveal-up" aria-label="GitHub repositories">
+            <div class="fc-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div class="fc-value" id="repo-count">—</div>
+              <div class="fc-label">Repositories</div>
+            </div>
+          </div>
+          <div class="floating-card fc-2 reveal-up" aria-label="Research interests">
+            <div class="fc-icon dna-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8 6 8 10 12 12s4 6 0 10M12 2C16 6 16 10 12 12s-4 6 0 10M6 5h12M6 19h12M6 9h12M6 15h12"/></svg>
+            </div>
+            <div>
+              <div class="fc-value">DNA</div>
+              <div class="fc-label">Bioinformatics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+    ============================================================ -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">About Me</span>
+          <h2 id="about-heading" class="section-title">Passionate About Science <br/>& Technology</h2>
+          <p class="section-subtitle">Where molecular biology meets the digital frontier</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal-left">
+            <p>
+              I'm <strong>Ahosan Habib Likhon</strong>, a BSc student in Biotechnology & Genetic Engineering at <strong>Islamic University, Bangladesh</strong>. My academic journey has given me a deep appreciation for the elegant complexity of life at the molecular level — from DNA replication to gene expression, every mechanism is a marvel of biological engineering.
+            </p>
+            <p>
+              Beyond the laboratory, I'm driven by the immense potential of computational approaches in biology. Bioinformatics and AI are transforming how we analyze genomes, predict protein structures, and develop targeted therapies. I'm actively building skills in these areas to contribute to this exciting frontier.
+            </p>
+            <p>
+              Parallel to my scientific pursuits, I'm developing as a <strong>front-end developer</strong>, creating digital experiences that communicate science beautifully. I believe that clear, compelling interfaces are essential for sharing research with the world.
+            </p>
+            <p>
+              My creative side expresses itself through <strong>photography</strong> — capturing the subtle beauty of nature, people, and the world around me with my camera and mobile device.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">🔬</div>
+                <div>
+                  <strong>Researcher at Heart</strong>
+                  <span>Pursuing rigorous scientific inquiry</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">💻</div>
+                <div>
+                  <strong>Developer in Progress</strong>
+                  <span>Building web experiences with code</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🤖</div>
+                <div>
+                  <strong>AI Enthusiast</strong>
+                  <span>Exploring machine learning applications</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">📷</div>
+                <div>
+                  <strong>Creative Photographer</strong>
+                  <span>Documenting the world through a lens</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-info reveal-right">
+            <div class="info-card glass-card">
+              <h3>Quick Facts</h3>
+              <ul class="info-list" role="list">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span><strong>Location:</strong> Bangladesh</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                  <span><strong>University:</strong> Islamic University, Bangladesh</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  <span><strong>Department:</strong> Biotechnology & Genetic Engineering</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  <span><strong>Status:</strong> BSc Student (Ongoing)</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.49 12 19.79 19.79 0 0 1 1.21 3.37 2 2 0 0 1 3.19 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span><strong>Email:</strong> ahosanhabiblikhon@gmail.com</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                  <span><strong>GitHub:</strong> @ahosanhabiblikhon</span>
+                </li>
+              </ul>
+              <a href="assets/resume.pdf" download class="btn btn-primary btn-full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         EDUCATION SECTION
+    ============================================================ -->
+    <section id="education" class="section section-alt" aria-labelledby="education-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Education</span>
+          <h2 id="education-heading" class="section-title">Academic Journey</h2>
+          <p class="section-subtitle">Building a foundation at the intersection of biology and technology</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>BSc in Biotechnology & Genetic Engineering</h3>
+                  <p class="timeline-institute">Islamic University, Kushtia-Jhenaidah, Bangladesh</p>
+                </div>
+                <span class="timeline-badge ongoing">Ongoing</span>
+              </div>
+              <p class="timeline-desc">
+                Currently pursuing a Bachelor of Science degree with a focus on molecular biology, genetics, cell biology, biochemistry, bioinformatics, and genetic engineering techniques. The program combines rigorous theoretical knowledge with hands-on laboratory training.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Molecular Biology</span>
+                <span class="tag">Genetics</span>
+                <span class="tag">Biochemistry</span>
+                <span class="tag">Bioinformatics</span>
+                <span class="tag">Cell Biology</span>
+                <span class="tag">Microbiology</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Higher Secondary Certificate (HSC)</h3>
+                  <p class="timeline-institute">Science Group — Bangladesh</p>
+                </div>
+                <span class="timeline-badge completed">Completed</span>
+              </div>
+              <p class="timeline-desc">
+                Completed higher secondary education with a strong foundation in Biology, Chemistry, and Physics — core subjects that prepared me for advanced study in biotechnology and the life sciences.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Biology</span>
+                <span class="tag">Chemistry</span>
+                <span class="tag">Physics</span>
+                <span class="tag">Mathematics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-up">
+            <div class="timeline-dot future" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="timeline-content glass-card future-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Future Goal — MSc / Research</h3>
+                  <p class="timeline-institute">Bioinformatics & Computational Biology</p>
+                </div>
+                <span class="timeline-badge future">Future</span>
+              </div>
+              <p class="timeline-desc">
+                Aspiring to pursue graduate studies in Bioinformatics, Computational Biology, or Genomics — ideally with a focus on AI-driven drug discovery, precision medicine, or structural biology.
+              </p>
+              <div class="timeline-tags">
+                <span class="tag">Computational Biology</span>
+                <span class="tag">Genomics</span>
+                <span class="tag">AI in Medicine</span>
+                <span class="tag">Drug Discovery</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS SECTION
+    ============================================================ -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Skills</span>
+          <h2 id="skills-heading" class="section-title">Technical Expertise</h2>
+          <p class="section-subtitle">A multidisciplinary toolkit spanning biology, code, and creative arts</p>
+        </div>
+
+        <div class="skills-categories">
+          <!-- Biotechnology & Life Sciences -->
+          <div class="skill-category reveal-up">
+            <h3 class="skill-cat-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2C8 6 8 10 12 12s4 6 0 10M12 2C16 6 16 10 12 12s-4 6 0 10M6 5h12M6 19h12M6 9h12M6 15h12"/></svg>
+              Biotechnology & Sciences
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card glass-card">
+                <div class="skill-icon bio">🧬</div>
+                <span class="skill-name">Molecular Biology</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Molecular Biology proficiency: 85%">
+                  <div class="skill-bar-fill" style="--target: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon bio">🔬</div>
+                <span class="skill-name">Biotechnology</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Biotechnology proficiency: 80%">
+                  <div class="skill-bar-fill" style="--target: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon bio">🧪</div>
+                <span class="skill-name">Biochemistry</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Biochemistry proficiency: 78%">
+                  <div class="skill-bar-fill" style="--target: 78%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon ai">🤖</div>
+                <span class="skill-name">Bioinformatics</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Bioinformatics proficiency: 65%">
+                  <div class="skill-bar-fill" style="--target: 65%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon bio">🧫</div>
+                <span class="skill-name">Cell Biology</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Cell Biology proficiency: 80%">
+                  <div class="skill-bar-fill" style="--target: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon bio">🦠</div>
+                <span class="skill-name">Microbiology</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Microbiology proficiency: 75%">
+                  <div class="skill-bar-fill" style="--target: 75%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming & Development -->
+          <div class="skill-category reveal-up">
+            <h3 class="skill-cat-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Programming & Development
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card glass-card">
+                <div class="skill-icon code">🐍</div>
+                <span class="skill-name">Python</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency: 65%">
+                  <div class="skill-bar-fill" style="--target: 65%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon code">🌐</div>
+                <span class="skill-name">HTML5</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 proficiency: 80%">
+                  <div class="skill-bar-fill" style="--target: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon code">🎨</div>
+                <span class="skill-name">CSS3</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="CSS3 proficiency: 75%">
+                  <div class="skill-bar-fill" style="--target: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon code">⚡</div>
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency: 60%">
+                  <div class="skill-bar-fill" style="--target: 60%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon code">🐱</div>
+                <span class="skill-name">Git & GitHub</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Git & GitHub proficiency: 70%">
+                  <div class="skill-bar-fill" style="--target: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon ai">🧠</div>
+                <span class="skill-name">AI / ML Basics</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="AI/ML proficiency: 50%">
+                  <div class="skill-bar-fill" style="--target: 50%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research & Creative -->
+          <div class="skill-category reveal-up">
+            <h3 class="skill-cat-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Research & Creative
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-card glass-card">
+                <div class="skill-icon research">📝</div>
+                <span class="skill-name">Research Writing</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Research Writing proficiency: 75%">
+                  <div class="skill-bar-fill" style="--target: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon research">🎤</div>
+                <span class="skill-name">Scientific Presentation</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Scientific Presentation proficiency: 70%">
+                  <div class="skill-bar-fill" style="--target: 70%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon creative">📸</div>
+                <span class="skill-name">Photography</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Photography proficiency: 85%">
+                  <div class="skill-bar-fill" style="--target: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon creative">🌅</div>
+                <span class="skill-name">Adobe Lightroom</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Adobe Lightroom proficiency: 75%">
+                  <div class="skill-bar-fill" style="--target: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon creative">🎭</div>
+                <span class="skill-name">Canva</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Canva proficiency: 80%">
+                  <div class="skill-bar-fill" style="--target: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-card glass-card">
+                <div class="skill-icon research">📊</div>
+                <span class="skill-name">Data Analysis</span>
+                <div class="skill-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Data Analysis proficiency: 60%">
+                  <div class="skill-bar-fill" style="--target: 60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS / GITHUB SECTION
+    ============================================================ -->
+    <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">GitHub Projects</span>
+          <h2 id="projects-heading" class="section-title">Open Source Work</h2>
+          <p class="section-subtitle">Repositories from <a href="https://github.com/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" class="inline-link">github.com/ahosanhabiblikhon</a></p>
+        </div>
+
+        <div class="repos-controls reveal-up">
+          <div class="repo-sort" role="group" aria-label="Sort repositories">
+            <button class="sort-btn active" data-sort="updated" aria-pressed="true">Recently Updated</button>
+            <button class="sort-btn" data-sort="stars" aria-pressed="false">Most Starred</button>
+          </div>
+          <div id="repo-stats" class="repo-stats" aria-live="polite"></div>
+        </div>
+
+        <div id="github-repos" class="repos-grid" aria-live="polite" aria-label="GitHub repositories">
+          <!-- Repos will be injected via JS -->
+          <div class="repos-loading" aria-label="Loading repositories">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <span>Loading repositories...</span>
+          </div>
+        </div>
+
+        <div class="repos-cta reveal-up">
+          <a href="https://github.com/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            View All on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESEARCH SECTION
+    ============================================================ -->
+    <section id="research" class="section" aria-labelledby="research-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Research</span>
+          <h2 id="research-heading" class="section-title">Research & Academic Work</h2>
+          <p class="section-subtitle">Exploring the frontiers of biotechnology and computational biology</p>
+        </div>
+
+        <div class="research-grid">
+          <!-- Research Interests -->
+          <div class="research-card glass-card reveal-up">
+            <div class="research-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2C8 6 8 10 12 12s4 6 0 10M12 2C16 6 16 10 12 12s-4 6 0 10M6 5h12M6 19h12M6 9h12M6 15h12"/></svg>
+            </div>
+            <h3>Research Interests</h3>
+            <ul class="research-list" role="list">
+              <li>Genomics & Functional Genomics</li>
+              <li>CRISPR-Cas9 Gene Editing Technologies</li>
+              <li>Computational Drug Discovery</li>
+              <li>Machine Learning in Bioinformatics</li>
+              <li>Protein Structure Prediction (AlphaFold)</li>
+              <li>Cancer Genomics & Precision Medicine</li>
+              <li>Microbiome Research</li>
+            </ul>
+          </div>
+
+          <!-- Academic Projects -->
+          <div class="research-card glass-card reveal-up">
+            <div class="research-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3>Academic Projects</h3>
+            <ul class="research-list" role="list">
+              <li>In-silico Analysis of Antimicrobial Peptides</li>
+              <li>Comparative Genomics of Pathogenic Bacteria</li>
+              <li>Phylogenetic Analysis Using Molecular Markers</li>
+              <li>Gene Expression Data Visualization with Python</li>
+              <li>Literature Review: Epigenetic Modifications in Cancer</li>
+              <li>Laboratory Practicals: PCR, Gel Electrophoresis, DNA Extraction</li>
+            </ul>
+          </div>
+
+          <!-- Poster Presentations -->
+          <div class="research-card glass-card reveal-up">
+            <div class="research-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Poster Presentations</h3>
+            <ul class="research-list" role="list">
+              <li>Biotechnology Research Seminar — IU (2023)</li>
+              <li>Annual Science Fair Poster Presentation</li>
+              <li>Department Symposium on Molecular Biology</li>
+              <li>Inter-University Research Competition Participant</li>
+            </ul>
+            <p class="research-note">
+              <em>* Poster presentation details to be updated with actual event information.</em>
+            </p>
+          </div>
+
+          <!-- Future Publications -->
+          <div class="research-card glass-card reveal-up future-card">
+            <div class="research-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Future Publications</h3>
+            <ul class="research-list" role="list">
+              <li>
+                <span class="pub-status wip">In Progress</span>
+                Computational Screening of Phytochemicals as Potential Inhibitors of Drug-Resistant Bacterial Proteins
+              </li>
+              <li>
+                <span class="pub-status planned">Planned</span>
+                Machine Learning-Based Prediction of Protein-Protein Interactions in Metabolic Networks
+              </li>
+              <li>
+                <span class="pub-status planned">Planned</span>
+                Review: Role of Non-Coding RNAs in Epigenetic Regulation
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PHOTOGRAPHY SECTION
+    ============================================================ -->
+    <section id="photography" class="section section-alt" aria-labelledby="photography-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Photography</span>
+          <h2 id="photography-heading" class="section-title">Creative Photography</h2>
+          <p class="section-subtitle">Capturing the world through a lens — nature, people, and everyday beauty</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="photo-filters reveal-up" role="tablist" aria-label="Photography categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="nature" role="tab" aria-selected="false">Nature</button>
+          <button class="filter-btn" data-filter="portrait" role="tab" aria-selected="false">Portrait</button>
+          <button class="filter-btn" data-filter="street" role="tab" aria-selected="false">Street</button>
+          <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+        </div>
+
+        <!-- Masonry Gallery -->
+        <div class="masonry-gallery" id="gallery" role="tabpanel" aria-label="Photo gallery">
+          <!-- Gallery items - replace src with your own images -->
+          <div class="gallery-item" data-category="nature" data-index="0">
+            <div class="gallery-placeholder nature-ph">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Nature Photo 1</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Golden Hour — Nature</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item tall" data-category="portrait" data-index="1">
+            <div class="gallery-placeholder portrait-ph">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Portrait Photo 1</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Portrait — Light & Shadow</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="street" data-index="2">
+            <div class="gallery-placeholder street-ph">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              <span>Street Photo 1</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Street Life — Bangladesh</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="mobile" data-index="3">
+            <div class="gallery-placeholder mobile-ph">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              <span>Mobile Photo 1</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Mobile Photography</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item tall" data-category="nature" data-index="4">
+            <div class="gallery-placeholder nature-ph2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              <span>Nature Photo 2</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Sunrise — Natural Light</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="street" data-index="5">
+            <div class="gallery-placeholder street-ph2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+              <span>Street Photo 2</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Urban Moments</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="portrait" data-index="6">
+            <div class="gallery-placeholder portrait-ph2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>
+              <span>Portrait Photo 2</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Environmental Portrait</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="mobile" data-index="7">
+            <div class="gallery-placeholder mobile-ph2">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Mobile Photo 2</span>
+              <small>Replace with your photo</small>
+            </div>
+            <div class="gallery-overlay">
+              <p class="gallery-caption">Mobile — Everyday Life</p>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="gallery-link" aria-label="View on Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+          <button class="lightbox-close" aria-label="Close lightbox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+          <button class="lightbox-prev" aria-label="Previous image">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="lightbox-content">
+            <div id="lightbox-img-container"></div>
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+          </div>
+          <button class="lightbox-next" aria-label="Next image">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+
+        <div class="photo-cta reveal-up">
+          <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            View Instagram Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+    ============================================================ -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Contact</span>
+          <h2 id="contact-heading" class="section-title">Let's Connect</h2>
+          <p class="section-subtitle">Whether it's research collaboration, a project, or just saying hello</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal-left">
+            <h3>Get in Touch</h3>
+            <p>I'm always open to discussing new research opportunities, collaboration on projects, or simply connecting with fellow science and technology enthusiasts. Feel free to reach out!</p>
+
+            <div class="contact-items">
+              <a href="mailto:ahosanhabiblikhon@gmail.com" class="contact-item glass-card">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <span>ahosanhabiblikhon@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://github.com/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" class="contact-item glass-card">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </div>
+                <div>
+                  <strong>GitHub</strong>
+                  <span>@ahosanhabiblikhon</span>
+                </div>
+              </a>
+              <a href="https://linkedin.com/in/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" class="contact-item glass-card">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <span>Ahosan Habib Likhon</span>
+                </div>
+              </a>
+              <div class="contact-item glass-card">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <strong>Location</strong>
+                  <span>Bangladesh</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-links-row" aria-label="Social media">
+              <a href="https://github.com/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" class="social-btn github" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.facebook.com/ahosan.habib.likhon.nur" target="_blank" rel="noopener noreferrer" class="social-btn facebook" aria-label="Facebook">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" class="social-btn instagram" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrapper reveal-right">
+            <form class="contact-form glass-card" id="contact-form" novalidate aria-label="Contact form">
+              <h3>Send a Message</h3>
+              <div class="form-group">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name" aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" autocomplete="off" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, research idea, or just say hello..." required aria-required="true"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </button>
+              <p class="form-note" role="status" aria-live="polite" id="form-status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo" aria-label="Go to top">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <circle cx="16" cy="16" r="15" stroke="var(--accent)" stroke-width="1.5"/>
+              <path d="M10 16 Q16 8 22 16 Q16 24 10 16Z" fill="var(--accent)" opacity="0.8"/>
+              <circle cx="16" cy="16" r="3" fill="var(--accent)"/>
+            </svg>
+            <span>AHL</span>
+          </a>
+          <p>Biotechnology & Genetic Engineering Student | Aspiring Developer | Researcher | Photographer</p>
+          <p class="footer-location">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bangladesh
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#photography">Photography</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-connect">
+          <h4>Connect</h4>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://github.com/ahosanhabiblikhon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.facebook.com/ahosan.habib.likhon.nur" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
+            <a href="https://instagram.com/ahosan.photo" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              Instagram
+            </a>
+            <a href="mailto:ahosanhabiblikhon@gmail.com" aria-label="Email" class="footer-social-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Designed &amp; Developed by <strong>Ahosan Habib Likhon</strong></p>
+        <p class="footer-copy">&copy; <span id="footer-year">2025</span> Ahosan Habib Likhon. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
